@@ -103,6 +103,14 @@ README.md
 
 ---
 
+## How to Run
+
+Install dependencies:
+
+    uv sync
+
+---
+
 ## Motivation
 
 This project demonstrates:
