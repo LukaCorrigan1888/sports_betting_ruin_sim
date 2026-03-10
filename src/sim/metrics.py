@@ -3,6 +3,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
+# Function to convert list of path results into summary table and full dataframe.
 
 def summarize(results: list[dict]):
     """

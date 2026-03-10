@@ -13,6 +13,7 @@ class SimConfig:
     n_bets: int = 1000
     ruin_threshold: float = 200.0  # "practical ruin" threshold
 
+# Simulate 1 path of the bankroll process
 
 def simulate_path(
     rng: np.random.Generator,
@@ -68,6 +69,8 @@ def simulate_path(
         "max_drawdown": max_drawdown,
     }
 
+# Function that takes a SimConfig and a stake_fn_factory
+# Runs many independent paths and returns list of path results (dicts) 
 
 def run_monte_carlo(
     cfg: SimConfig,

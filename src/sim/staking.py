@@ -1,16 +1,21 @@
+# This file contains the different staking strategies for the simulation.
+
 from __future__ import annotations
 
+# Returns the minimum of the two values, but not less than 0.0
 
 def stake_flat(bankroll: float, amount: float) -> float:
     """Flat staking: bet a fixed dollar amount each bet."""
     return max(0.0, min(amount, bankroll))
 
+# Returns a stake thats a fraction of current bankroll
 
 def stake_fraction(bankroll: float, fraction: float) -> float:
     """Fixed fraction staking: bet fraction * bankroll each bet."""
     stake = fraction * bankroll
     return max(0.0, min(stake, bankroll))
 
+# Returns the stakethat maximises the expected log growth of bankroll.
 
 def stake_kelly_fractional(
     bankroll: float,
