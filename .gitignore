@@ -23,3 +23,7 @@ sports_betting_ruin*
 
 .DS_Store
 Thumbs.db
+
+src/sports_betting_ruin_sim.egg-info
+
+.python-version
